@@ -10,6 +10,9 @@ from flask_sqlalchemy import SQLAlchemy
 # envia app a SQLAlquemy. Los modelos de las tablas, que serán 
 #las clases se coloca en models
 app = Flask(__name__)
+
+app.secret_key = 'secret key'
+
 app.config["SQLALCHEMY_DATABASE_URI"] ='mysql://rene:1234@localhost/contactsdb'
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 SQLAlchemy(app)

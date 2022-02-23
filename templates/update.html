@@ -1,0 +1,9 @@
+<h1>update</h1>
+<form action="/update/{{contact.id}}" method="POST">
+    <!--con value, le asigno el valor de la variable contact enviada desde la funcion update -->
+    <input type="text" name="fullname" placeholder="Wirte you Name" value="{{contact.fullname}}"/>
+    <input type="text" name="email" placeholder="Wirte you Email" value="{{contact.email}}"/>
+    <input type="text" name="phone" placeholder="Wirte you Phone" value="{{contact.phone}}"/>
+
+    <button>Save</button>
+</form>
