@@ -72,4 +72,4 @@ def delete(id):
 
 @contacts.route('/about')
 def about():
-    return render_template('contact.html')
+    return render_template('about.html')

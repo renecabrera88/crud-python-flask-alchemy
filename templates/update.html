@@ -1,9 +1,45 @@
-<h1>update</h1>
-<form action="/update/{{contact.id}}" method="POST">
-    <!--con value, le asigno el valor de la variable contact enviada desde la funcion update -->
-    <input type="text" name="fullname" placeholder="Wirte you Name" value="{{contact.fullname}}"/>
-    <input type="text" name="email" placeholder="Wirte you Email" value="{{contact.email}}"/>
-    <input type="text" name="phone" placeholder="Wirte you Phone" value="{{contact.phone}}"/>
+{% extends 'layout.html' %}
 
-    <button>Save</button>
-</form>
+{% block content %}
+
+<div class="row">
+  <div class="col-md-4 offset-md-4">
+    <form action="/update/{{contact.id}}" method="POST" class="card bg-dark text-light">
+      <div class="card-body p-4">
+          <div class="md-3">
+              <label for="fullname"> Write your fullname</label>
+              <input 
+                type="text" 
+                name="fullname" 
+                class="form-control rounded-0 bg-dark border-0 text-white"
+                value="{{contact.fullname}}" 
+              />
+          </div>
+          <div class="mb-3">
+              <label for="email"> Write your email</label>
+              <input 
+                type="text" 
+                name="email" 
+                placeholder="Write you Email"
+                class="form-control rounded-0 bg-dark border-0 text-white"
+                value="{{contact.email}}"
+              />
+          </div>
+          <div class="mb-3">
+              <label for="phone"> Write your phone</label>
+              <input 
+                type="text" 
+                name="phone" 
+                placeholder="Write you phone"
+                class="form-control rounded-0 bg-dark border-0 text-white"
+                value="{{contact.phone}}" 
+              />
+          </div>
+      </div>
+  
+      <button class="btn btn-secondary">Update</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
